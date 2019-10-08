@@ -1,6 +1,8 @@
 *{
   padding: 0;
   margin: 0;
+  font-size: 1.1rem;
+  box-sizing: border-box;
 }
 .nav-wrap{
   margin-top: 5px;

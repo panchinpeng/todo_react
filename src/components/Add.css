@@ -1,11 +1,18 @@
-.add-wrap{
+.add-wrap {
   display: flex;
   justify-content: center;
   margin: 10px 0;
+  padding: 10px;
 }
-.commit-input{
+
+.commit-input {
   padding: 10px;
   resize: none;
-  width: 50%;
-  min-width: 150px;
+  min-width: 230px;
+  max-width: 860px;
+  width: 100%;
+  border: 0;
+  box-shadow: 1px 1px 3px 1px #ccc;
+  outline: 0;
+
 }

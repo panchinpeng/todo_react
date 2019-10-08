@@ -1,6 +1,13 @@
 export let doToReducer = (state = [], actions) => {
   switch (actions.type){
-    default :
+    case 'ADD_TODO': {
+      let newState = [...state]
+      newState.push(actions.data)
+      return newState
+    }
+    default : {
       return state
+    }
+      
   }
 }

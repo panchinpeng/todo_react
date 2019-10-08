@@ -12,9 +12,9 @@ export default class App extends Component{
         <Header />
         <Add />
         <div className="nav-wrap">
-          <NavLink to="/all" className="nav-link">全部</NavLink>
-          <NavLink to="/do" className="nav-link">完成</NavLink>
-          <NavLink to="/undo" className="nav-link">未完成</NavLink>
+          <NavLink to="/all" className="nav-link">all</NavLink>
+          <NavLink to="/do" className="nav-link">finish</NavLink>
+          <NavLink to="/undo" className="nav-link">unfinished</NavLink>
         </div>
         <Switch>
           <Route path="/all" component={Detail}></Route>

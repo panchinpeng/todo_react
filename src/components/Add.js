@@ -1,11 +1,29 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import { AddTodo } from '../redux/actions'
 import './Add.css'
-export default class extends Component{
-  render(){
-    return(
-      <div className="add-wrap">
-        <textarea rows="5" className="commit-input"/>
+class Add extends Component {
+  send = (e) => {
+    if (e.which === 13 && e.ctrlKey) {
+      this.props.sendTodo(e.target.value)
+    }
+  }
+  render() {
+    return ( 
+      <div className = "add-wrap" >
+      <textarea rows = "5" className = "commit-input"  onKeyDown = { this.send }/> 
       </div>
     )
   }
 }
+let mapStatetoProps = (state) => ({
+
+})
+let mapDispatchToProps = (dispatch) => ({
+  sendTodo : (title) => {
+    dispatch(AddTodo(title))
+  }
+})
+
+export default connect(mapStatetoProps, mapDispatchToProps)(Add)
