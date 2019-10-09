@@ -6,6 +6,7 @@ import './Detail.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 class Detail extends Component{
+  
   render(){
     console.log(this.props.todos)
     return (

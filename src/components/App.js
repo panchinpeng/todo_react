@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { NavLink, Route, Switch } from 'react-router-dom'
+import { NavLink, Route, Switch, Redirect } from 'react-router-dom'
 
 import './App.css'
 import Header from './Header.js'
@@ -20,6 +20,7 @@ export default class App extends Component{
           <Route path="/all" component={Detail}></Route>
           <Route path="/do" component={Detail}></Route>
           <Route path="/undo" component={Detail}></Route>
+          <Redirect to="/all"></Redirect>
         </Switch>
       </div>
       
