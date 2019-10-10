@@ -5,14 +5,15 @@ import { AddTodo } from '../redux/actions'
 import './Add.css'
 class Add extends Component {
   send = (e) => {
-    if (e.which === 13 && e.ctrlKey) {
+    if (e.which === 13 && e.ctrlKey && e.target.value) {
       this.props.sendTodo(e.target.value)
+      e.target.value = ''
     }
   }
   render() {
     return ( 
       <div className = "add-wrap" >
-      <textarea rows = "5" className = "commit-input"  onKeyDown = { this.send }/> 
+        <textarea rows = "5" className = "commit-input"  onKeyDown = { this.send }/> 
       </div>
     )
   }

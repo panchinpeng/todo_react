@@ -1,26 +1,34 @@
-*{
+* {
   padding: 0;
   margin: 0;
   font-size: 1.1rem;
   box-sizing: border-box;
 }
-.nav-wrap{
-  margin-top: 5px;
-  display: flex;
-  justify-content: center;
+
+.nav-wrap {
+  padding: 10px;
 }
-.nav-link{
+
+.layout-content {
+  min-width: 230px;
+  max-width: 860px;
+  width: 100%;
+  margin: auto;
+}
+
+.nav-link {
   padding: 5px 15px;
-  margin-right: 5px;
   text-decoration: none;
   background-image: linear-gradient(45deg, #b8860bbf, #daa72acf);
   color: #fff;
-  border-radius: 4px;
 }
-.nav-link:hover, .nav-link.active{
+
+.nav-link:hover,
+.nav-link.active {
   box-shadow: 1px 1px 0px 1px #312a1abf, -1px -1px 0px 1px #312a1abf;
   background-image: linear-gradient(45deg, #bb890e, #daa72a);
 }
-body{
+
+body {
   min-width: 230px;
 }

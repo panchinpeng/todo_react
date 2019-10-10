@@ -10,18 +10,21 @@ export default class App extends Component{
     return (
       <div>
         <Header />
-        <Add />
-        <div className="nav-wrap">
-          <NavLink to="/all" className="nav-link">all</NavLink>
-          <NavLink to="/do" className="nav-link">finish</NavLink>
-          <NavLink to="/undo" className="nav-link">unfinished</NavLink>
+        <div className="layout-content">
+          <Add />
+          <div className="nav-wrap">
+            <NavLink to="/all" className="nav-link">all</NavLink>
+            <NavLink to="/do" className="nav-link">finish</NavLink>
+            <NavLink to="/undo" className="nav-link">unfinished</NavLink>
+          </div>
+          <Switch>
+            <Route path="/all" component={Detail}></Route>
+            <Route path="/do" component={Detail}></Route>
+            <Route path="/undo" component={Detail}></Route>
+            <Redirect to="/all"></Redirect>
+          </Switch>
         </div>
-        <Switch>
-          <Route path="/all" component={Detail}></Route>
-          <Route path="/do" component={Detail}></Route>
-          <Route path="/undo" component={Detail}></Route>
-          <Redirect to="/all"></Redirect>
-        </Switch>
+        
       </div>
       
     )
